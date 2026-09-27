@@ -1,0 +1,26 @@
+Reference,Value,Description
+IC1,CNY17-3,Optocoupler input (ignition pulse)
+IC5,CNY17-3,Optocoupler output (isolated RPM signal)
+IC2,LM7815,15 V voltage regulator (TO-220)
+IC3,HCF40106,Hex Schmitt-trigger inverter (DIL14)
+IC4,BC547B,NPN transistor driving the output optocoupler
+D1,1N4007,Reverse protection across input optocoupler LED
+D2,1N4007,Discharge diode for the RC filter
+D3,LED red,Power indicator
+R1,10K,Input series resistor
+R2,10K,Input series resistor
+R3,2K,LED series resistor
+R4,50K,RC filter
+R5,10K,Transistor base resistor
+R6,1K,Output optocoupler LED resistor
+R7,10K,Output pull-up
+C1,10nF,RC filter
+C2,0.1uF,Regulator input
+C3,0.1uF,Regulator output
+C4,10uF,Regulator output
+C5,10uF,Regulator input
+C6,not fitted,Footprint only
+C7,not fitted,Footprint only
+PINHD1,1x2 header,Input
+PINHD2,1x2 header,Supply (Vcc_IC)
+PINHD3,1x3 header,Output

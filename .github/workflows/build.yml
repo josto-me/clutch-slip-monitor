@@ -1,0 +1,22 @@
+name: Build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  arduino-due:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: arduino/compile-sketches@v1
+        with:
+          fqbn: arduino:sam:arduino_due_x_dbg
+          libraries: |
+            - name: Adafruit GFX Library
+            - name: Adafruit HX8357 Library
+            - name: Adafruit BusIO
+          sketch-paths: |
+            - firmware/Clutch_Slip_Monitor
+          enable-warnings-report: true
